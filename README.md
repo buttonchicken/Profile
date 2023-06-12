@@ -10,7 +10,7 @@ Steps to set up the project:
         **python3 manage.py makemigrations**
 
 3. Migrate using:
-        **python3 manage.py migrate **
+        **python3 manage.py migrate**
 
 Start server using the command:
         **python3 manage.py runserver**
