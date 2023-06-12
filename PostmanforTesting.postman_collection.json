@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "1cf37b06-b958-4c66-80a1-3a73123c5b81",
+		"name": "PostmanforTesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17435228",
+		"_collection_link": "https://dark-crater-279336-1.postman.co/workspace/Work~2b19dc81-529d-4987-b521-e7cf8a64aade/collection/17435228-1cf37b06-b958-4c66-80a1-3a73123c5b81?action=share&creator=17435228&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"test\",\n    \"password\":\"Test@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/account/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"account",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"test\",\n    \"password\":\"Test@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/account/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg5MTk2MDgwLCJpYXQiOjE2ODY2MDQwODAsImp0aSI6ImExZGU3YWIxYTZmZDQ2ODNhMzBhNWQ0NzAyZThlMWFiIiwidXNlcm5hbWUiOiJ0ZXN0In0.FGRGsGyES8Li0dYrd85z4XQi6t--2R3maqFxI6HJZDc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "bio",
+							"value": "Hi, I am a test bot based out of India. It's great to catch up!!",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Chaman",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Gupta",
+							"type": "text"
+						},
+						{
+							"key": "profile_picture",
+							"type": "file",
+							"src": "/Users/amutharia/Desktop/Screenshot 2023-04-02 at 10.47.05 AM.png"
+						},
+						{
+							"key": "email",
+							"value": "ab@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "+918989892356",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/account/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"account",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
